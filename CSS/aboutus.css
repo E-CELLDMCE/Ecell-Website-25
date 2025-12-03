@@ -371,7 +371,6 @@ body {
     /* yellow tint on hover */
 }
 
-
 .social-item img[alt="Twitter"] {
     /* Remove the harsh filter that works poorly on non-SVG/non-monochromatic PNGs */
     filter: none; 
