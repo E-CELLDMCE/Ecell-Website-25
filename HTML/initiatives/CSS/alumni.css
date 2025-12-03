@@ -1,0 +1,486 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header {
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-container img {
+      height: 50px;
+      width: auto;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container img:hover {
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+      transform: scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-menu li {
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #FFD700;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.97);
+      border-top: 1px solid rgba(255, 215, 0, 0.3);
+      padding: 10px 20px 16px;
+    }
+
+    .mobile-nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      padding: 10px 0;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-nav a.active {
+      color: #FFD700;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    /* ============== MAIN SECTIONS ============== */
+
+    .alumni-page {
+      max-width: 1200px;
+      margin: 80px auto 0;
+      background: #000;
+      padding: 40px 20px 0;
+      color: #fff;
+    }
+
+    /* HERO SECTION */
+    .alumni-hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .alumni-hero img.logo {
+      width: 260px;
+      height: auto;
+      filter: drop-shadow(0 0 20px rgba(255, 210, 77, 0.3));
+    }
+
+    .title-wrap {
+      text-align: left;
+    }
+
+    .alumni-title {
+      font-size: 110px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      line-height: 1;
+      background: linear-gradient(90deg, #f6eb14, #ff3838);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      filter: drop-shadow(0 0 20px rgba(255, 180, 0, 0.2));
+    }
+
+    .alumni-tag {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: #ffcc33;
+    }
+
+    /* ABOUT SECTION (full width background) */
+    .alumni-about {
+      position: relative;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: 80px;
+      padding: 120px 20px;
+      text-align: center;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(180deg, rgba(255, 200, 0, 0.2), rgba(255, 80, 20, 0.2));
+      background-image: url("../images/alumni/alumni_bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .alumni-about::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      opacity: 1;
+      background-attachment: fixed;
+    }
+
+    .alumni-about::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    .alumni-about h2 {
+      font-size: 40px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .alumni-about p {
+      color: #f1f1f1;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+
+    /* CONTACT / INITIATIVE HEAD SECTION */
+    .contact-section {
+      text-align: center;
+      padding: 80px 20px 120px;
+    }
+
+    .contact-section h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffeb00, #ff3838);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .contact-image-box {
+      flex: 0 0 260px;
+      height: 260px;
+    }
+
+    .contact-image {
+      width: 100%;
+      height: 100%;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+    }
+
+    .contact-info {
+      max-width: 480px;
+      text-align: left;
+    }
+
+    .contact-info h3 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #f6eb14;
+      margin-bottom: 8px;
+    }
+
+    .contact-info p {
+      margin-top: 0;
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .icons {
+      margin-top: 5px;
+      display: flex;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #000;
+      padding: 40px 20px 30px;
+      font-size: 16px;
+      border-top: 1px solid #222;
+    }
+
+    .footer-top {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-logo {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      flex: 2;
+      min-width: 260px;
+    }
+
+    .footer-links div {
+      min-width: 130px;
+    }
+
+    .footer-links h4 {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a,
+    .footer-links p {
+      display: block;
+      color: #aaa;
+      text-decoration: none;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #FFD700;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 30px auto 0;
+      text-align: center;
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    /* ================== RESPONSIVE ================== */
+
+    @media (max-width: 1024px) {
+      .alumni-title {
+        font-size: 80px;
+      }
+      .title-wrap {
+        text-align: center;
+      }
+      .alumni-hero {
+        text-align: center;
+      }
+      .contact-info {
+        text-align: center;
+      }
+      .icons {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 900px) {
+      /* Navbar switches to hamburger */
+      .nav-menu {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-container {
+        padding: 0 16px;
+      }
+
+      .alumni-title {
+        font-size: 64px;
+      }
+
+      .alumni-about {
+        padding: 80px 20px;
+      }
+
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-image-box {
+        width: 260px;
+        height: 260px;
+      }
+
+      .contact-info {
+        max-width: 90%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .alumni-title {
+        font-size: 46px;
+        letter-spacing: 2px;
+      }
+
+      .alumni-hero img.logo {
+        width: 200px;
+      }
+
+      .alumni-about h2 {
+        font-size: 28px;
+      }
+
+      .alumni-about p {
+        font-size: 15px;
+      }
+
+      .contact-section h2 {
+        font-size: 2rem;
+      }
+
+      .contact-info h3 {
+        font-size: 24px;
+      }
+
+      .contact-info p {
+        font-size: 16px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }

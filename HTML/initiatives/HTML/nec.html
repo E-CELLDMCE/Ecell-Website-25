@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-CELL DMCE | NEC</title>
+  <link rel="stylesheet" href="../CSS/nec.css" />
+  <link rel="icon" type="image/png" href="../images/nec/img_frame_2.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <a href="https://e-celldmce.github.io/ecelldmcehome/" target="_blank">
+        <img src="../images/nec/ecell_logo.png" alt="E-CELL Logo" />
+      </a>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="/ecell final/Home.html">HOME</a></li>
+          <li><a href="/ecell final/HTML/aboutus.html">ABOUT US</a></li>
+          <li><a href="/ecell final/HTML/event.html">EVENT</a></li>
+          <li><a href="/ecell final/HTML/gallery.html">GALLERY</a></li>
+          <li><a href="/ecell final/HTML/Team_Members.html">TEAM</a></li>
+          <li><a href="#initiative" class="active">INITIATIVE</a></li>
+          <li><a href="/ecell final/HTML/contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/ecell final/Home.html">HOME</a>
+      <a href="/ecell final/HTML/aboutus.html">ABOUT US</a>
+      <a href="/ecell final/HTML/event.html">EVENT</a>
+      <a href="/ecell final/HTML/gallery.html">GALLERY</a>
+      <a href="/ecell final/HTML/Team_Members.html">TEAM</a>
+      <a href="#initiative" class="active">INITIATIVE</a>
+      <a href="/ecell final/HTML/contact.html">CONTACT US</a>
+    </div>
+  </header>
+
+  <!-- GUIDELINES SECTION -->
+  <section id="initiative" class="guidelines-section">
+    <div class="guidelines-content">
+      <img src="../images/nec/rocket.png" alt="Rocket Icon" class="rocket" />
+      <h1><span class="gradient-text">What is NEC ?</span></h1>
+      <div class="guidelines-box">
+        <ul>
+          <li>It’s a nationwide competition where colleges compete to build strong entrepreneurship culture on their campus.</li>
+          <li>Teams in NEC IIT Bombay are required to complete weekly tasks that focus on developing a strong entrepreneurial ecosystem in their college. These tasks involve conducting startup awareness activities and events, connecting with founders and venture capitalists, building and strengthening student entrepreneurship clubs, executing effective branding, marketing, and social media campaigns, and taking part in fundraising and leadership-focused initiatives.</li>
+          <li>Performance is tracked through points and leaderboards.</li>
+          <li>Top colleges get awards and recognition at IIT Bombay during E-Summit.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US -->
+  <section id="contact" class="contact-section">
+    <h2><span class="gradient-text">CONTACT US</span></h2>
+    <div class="contact-container">
+      <div class="contact-image-box">
+        <div class="contact-image">
+          <img src="../images/nec/shriram_photo.png" alt="Shriram Nalawade" />
+        </div>
+      </div>
+      <div class="contact-info">
+        <h3>SHRIRAM NALAWADE</h3>
+        <p>Initiative Head<br>(NEC)</p>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/shriram-nalawade-a64093309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:shriramnalawadeecell@gmail.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <img src="../images/nec/ecell_logo.png" alt="E-CELL Logo" class="footer-logo">
+        <p>📍 Location: Datta Meghe College of Engineering, Sector 3, Airoli, Navi Mumbai - 400708</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Quick Links</h4>
+          <a href="/ecell final/Home.html">Home</a>
+          <a href="/ecell final/HTML/aboutus.html">About us</a>
+          <a href="/ecell final/HTML/event.html">Event</a>
+          <a href="/ecell final/HTML/gallery.html">Gallery</a>
+          <a href="/ecell final/HTML/Team_Members.html">Team</a>
+          <a href="/ecell final/HTML/intiaitive.html" class="active">INITIATIVE</a>
+          <a href="/ecell final/HTML/contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">FAQs</a>
+          <a href="#">Register</a>
+          <a href="#">Volunteer</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>✉ ecell@dmce.ac.in</p>
+          <p>📸 ecell_dmce</p>
+          <p>🔗 ECell_DMCE</p>
+          <p>📘 ECell_DMCE</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ECELL | E-CELL DMCE. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      if (nav) {
+        nav.classList.toggle('active');
+      }
+    }
+
+    // Close mobile nav after clicking a link
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileNav) {
+        mobileNav.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+          });
+        });
+      }
+    });
+
+    // Smooth scroll only for in-page anchors like #initiative
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

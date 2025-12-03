@@ -1,0 +1,1069 @@
+body{
+background-color: black;
+background-image:url(background.jpg) ;
+background-size: cover;
+}
+
+ /* Header Styles */
+        /* ==============================
+    HEADER / NAVBAR STYLING
+   ============================== */
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    height: 75px; /* fixed height that won't increase */
+    position: static; /* not fixed — scrolls naturally */
+    z-index: 100;
+}
+
+/* LOGO SECTION */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    height: 60px;          /* actual image height */
+    width: auto;
+    transform: scale(1.3); /* makes it visually larger without increasing height */
+    transform-origin: left center;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-section img:hover {
+    transform: scale(1.4);
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f9c802; /* E-CELL yellow */
+}
+
+/* NAVIGATION LINKS */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+    color: #f9c802; /* E-CELL yellow hover */
+    transform: scale(1.1);
+}
+
+nav a.active {
+    color: #f9c802;
+}
+
+/* HAMBURGER BUTTON (MOBILE) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV MENU */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.25s ease;
+}
+
+.mobile-nav a:hover {
+    color: #f9c802;
+}
+
+/* WHEN MOBILE NAV IS ACTIVE */
+.mobile-nav.active {
+    display: flex;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 1024px) {
+    nav {
+        display: none; /* hide desktop nav */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-section img {
+        height: 55px;
+        transform: scale(1.2);
+    }
+
+    .header-content {
+        padding: 10px 25px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-section img {
+        height: 50px;
+        transform: scale(1.1);
+    }
+
+    .header-content {
+        padding: 10px 20px;
+        height: 65px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+.our{
+  font-family:'Montserrat', sans-serif; 
+    color: gold;
+  text-align: center;
+  font-style: bold;
+  font-size: xx-large;
+}
+.para{
+  color: white;
+  text-align: center;
+  font-size: xx-large;
+font-family:'Montserrat', sans-serif; 
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+/* --- START OF CARD CENTERING FIX --- */
+/* This new rule centers the cards on the page */
+.initiative-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0; /* Add some vertical spacing */
+}
+/* --- END OF CARD CENTERING FIX --- */
+
+
+.In{
+  text-align: center;
+  color: gold;
+  font-family:'Oswald', sans-serif; 
+}
+
+.NEC{
+  text-align: center;
+  color: gold;
+  font-family:'Oswald', sans-serif; 
+}
+.AL{
+  text-align: center;
+  color: gold;
+  font-family:'oswald', sans-serif; 
+}
+.EN{
+  text-align: center;
+  color: gold;
+  font-family:'oswald', sans-serif; 
+}
+
+
+.ENSPIRE{
+float: right;
+}
+
+
+/* --- NEW SEPARATE BUTTON STYLES --- */
+
+/* This is your cleaned-up, CENTERED button style for .bu1 */
+.bu1 {
+  /* Base styles */
+  background: linear-gradient(to right, red, #c00);
+  background-color: red;
+  color: white;
+  padding: 10px 20px; /* Make buttons bigger */
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  
+  /* --- UPDATED: Added position and overflow for shine --- */
+  position: relative;
+  overflow: hidden; 
+
+  /* Centering */
+  left: 0; 
+  /* --- UPDATED: BUTTONS SHIFTED DOWN --- */
+  margin-top: 305px; /* Was 20px */
+  
+  /* Interaction */
+  opacity: 1; /* Visible by default */
+  cursor: pointer; /* Ensure it's clickable */
+  
+  /* --- UPDATED FOR SLIDE DOWN --- */
+  top: 0; /* Starting vertical position */
+  /* --- UPDATED: Added box-shadow and filter to transition --- */
+  transition: opacity 0.4s ease, top 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+/* This is the separate style for the other 3 OFFSET buttons */
+.bu4 {
+  /* Base styles */
+  background: linear-gradient(to right, red, #c00);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+
+  /* --- UPDATED: Added position and overflow for shine --- */
+  position: relative;
+  overflow: hidden; 
+  
+  /* Offset positioning */
+  left: 0px; /* This is the offset you wanted to keep */
+  /* --- UPDATED: BUTTONS SHIFTED DOWN --- */
+  margin-top: 95px; /* Was 20px */
+  
+  /* Interaction */
+  opacity: 1;
+  cursor: pointer;
+
+  /* --- UPDATED FOR SLIDE DOWN --- */
+  top: 0; /* Starting vertical position */
+  /* --- UPDATED: Added box-shadow and filter to transition --- */
+  transition: opacity 0.4s ease, top 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+/* Fix for mobile: center ALL buttons */
+@media (max-width: 768px) {
+    .bu1, .bu2, .bu3, .bu4 {
+      position: relative;
+       left: 0; /* Reset position for all */
+       transform: none; /* Reset transform */
+       margin-top: 15px; /* Add some space */
+    }
+}
+
+/* --- END OF NEW BUTTON STYLES --- */
+
+
+#box5{
+  margin: 70px;
+}
+.box6{
+  border: 1px solid;
+  width: 200px;
+  border-color:black;
+  color: rgb(200, 198, 198);
+  font-size: medium;
+  margin-top: 20px;
+  font-family:'Montserrat', sans-serif; 
+;
+}
+.quick{
+  color: white;
+  font-family:'Montserrat', sans-serif; 
+
+}
+.navb a{
+  color:rgb(200, 198, 198);
+  text-decoration: none; 
+  font-family:'Montserrat', sans-serif; 
+}
+.navb ul{
+   list-style-type:none ;
+   font-size: smaller;
+   margin-top: 20px;
+   font-family:'Montserrat', sans-serif; 
+}
+#bo{
+  margin-left: 50px;
+  float: left;
+  font-family:'Montserrat', sans-serif; 
+}
+.img{
+  margin: 20px;
+  float: left;
+  margin-left : 20px;
+}
+#lin{
+  margin-left: 250px;
+  float:left ;
+}
+.re{
+  color: white;
+}
+.res ul{
+  list-style-type: none;
+ color:rgb(200, 198, 198);
+ font-size: medium;
+ margin-top: 20px;
+}
+#r{
+  margin-left: 70px;
+  float: left;
+}
+.le{
+  color: white;
+  font-family:'Montserrat', sans-serif; 
+}
+.leg ul{
+  list-style-type: none;
+ color:rgb(200, 198, 198);
+ font-size: medium;
+ margin-top: 20px;
+ font-family:'Montserrat', sans-serif; 
+}
+#l{
+  margin-left: 70px;
+  float: left;
+  height: 100px;
+  font-family:'Montserrat', sans-serif; 
+}
+.cont{
+  color: white;
+  font-family:'Montserrat', sans-serif; 
+}
+.conta ul{
+  list-style-type: none;
+ color:rgb(200, 198, 198);
+ font-size: medium;
+ margin-top: 20px;
+ font-family:'Montserrat', sans-serif; 
+
+}
+#con{
+  margin-left: 980px;
+  
+}
+hr{
+  border-color: white;
+  font-family:'Montserrat', sans-serif; 
+}
+.right{
+  color:rgb(200, 198, 198);
+  text-align: center;
+  font-family:'Montserrat', sans-serif; 
+}
+
+/* --- START OF LAYOUT FIXES --- */
+
+#box7{
+  width: 310px;
+ height: 390px; 
+ /* float: left; <-- REMOVED this */
+ position: relative;
+ padding: 20px; /* Added consistent padding */
+}
+#box8{
+  width: 310px;
+ height: 390px; 
+/* float: left; <-- REMOVED this */
+position: relative;
+padding: 20px; /* Added consistent padding */
+}
+
+#box9{
+position: relative;
+width: 310px;
+height: 500px; 
+/* float: left; <-- REMOVED this */
+padding: 20px; /* Changed padding to be consistent */
+}
+#box10{
+height: 390px; 
+ /* float: left; <-- REMOVED this */
+  width: 310px;
+  padding: 20px; /* Added consistent padding */
+}
+
+/* This new rule fixes the footer position */
+#box11{
+  clear: both; 
+}
+
+/* --- END OF LAYOUT FIXES --- */
+
+
+/* --- START OF CARD HOVER FIX --- */
+
+/* 1. UNIFY CARD STYLES */
+/* Override existing #box7, #box8, #box9, #box10 styles */
+#box7, #box8, #box9, #box10 {
+    /* Using original width for layout */
+    width: 310px;
+    /* float: left; <-- REMOVED for flexbox centering */
+    position: relative;
+    padding: 20px;
+    
+    /* Force consistent height, overriding #box9's 500px */
+    height: 390px; 
+    
+    /* Use margin for spacing in the flex container */
+    margin: 15px; 
+    
+    /* New styles for hover effect */
+    background-color: transparent; /* Default background */
+    border: 2px solid gold; /* Add a border to see the card area */
+    border-radius: 10px;
+    transition: background-color 0.4s ease;
+    overflow: hidden; /* Hide anything that pokes out */
+
+    /* Use flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    
+    /* --- UPDATED: Added perspective for 3D flip --- */
+    perspective: 1000px;
+}
+
+/* 2. STYLE THE SINGLE IMAGE */
+.card-img {
+    /* --- UPDATED: Reverted to 100% size --- */
+    width: 120px; /* Was 108px, now 100% again */
+    height: 120px; /* Was 108px, now 100% again */
+    object-fit: cover;
+    object-position: 40% 50%; /* Kept for left shift */
+    border-radius: 50%; /* Makes them circles */
+    margin-bottom: 15px;
+    
+    /* --- NEW: Added padding and background for inner spacing --- */
+    padding: 5px; /* Creates the 5px "padding" */
+    background-color: black; /* Fills the padding area */
+    box-sizing: border-box; /* Ensures padding is INCLUDED in the 120px size */
+    
+    /* Animation setup */
+    position: relative;
+    top: 0; /* Starting position */
+    
+    /* --- UPDATED: Changed transition from 'top' to 'transform' and added box-shadow for glow --- */
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.4s ease; /* Animate 'transform' property slower */
+    transform: rotateY(0deg); /* Default state */
+
+    order: -1; /* This moves the image *before* the title in flexbox */
+}
+
+/* 3. DEFAULT STATE (NO HOVER) */
+
+/* Style and position the titles */
+.In, .NEC, .AL, .EN {
+    color: gold;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 2rem; /* Make titles bigger */
+    position: relative;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+/* Fix for #box10's title which is wrapped in a div */
+#box4 {
+    text-align: center;
+}
+
+
+/* Hide the descriptive text by default */
+.INCU, .NE, .ALMUNI, .ENSPIRE {
+    /* Hide it */
+    opacity: 0;
+    visibility: hidden;
+    height: 0; /* Hide it completely */
+    
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    color: gold; 
+
+    /* --- UPDATED: Removed justify, changed to center --- */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* Position it in the center */
+    position: absolute;
+    width: 85%; /* Don't touch the edges */
+    /* --- UPDATED: TEXT SHIFTED DOWN --- */
+    top: 55%; /* Was 40% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Transition for hover effect */
+    transition: opacity 0.4s ease, visibility 0s 0.4s;
+    
+    /* Reset problematic styles */
+    float: none; /* Override .ENSPIRE's float: right */
+}
+
+/* 4. HOVER STATE (ON THE CARD) */
+
+/* When hovering any card... */
+#box7:hover, #box8:hover, #box9:hover, #box10:hover {
+    background-color: black; /* "black" background */
+    border-color: gold; /* Keep border gold */
+}
+
+/* ...Hide the title */
+#box7:hover .In,
+#box8:hover .NEC,
+#box9:hover .AL,
+#box10:hover .EN {
+    opacity: 0;
+}
+
+
+/* --- UPDATED: Changed to full 360 spin --- */
+#box7:hover .card-img,
+#box8:hover .card-img,
+#box9:hover .card-img,
+#box10:hover .card-img {
+    transform: rotateY(360deg); /* Was 180deg */
+    /* --- NEW: Image glow on hover --- */
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7); /* Subtle golden glow */
+}
+
+/* ...Show the descriptive text */
+#box7:hover .INCU,
+#box8:hover .NE,
+#box9:hover .ALMUNI, /* Corrected class */
+#box10:hover .ENSPIRE {
+    opacity: 1;
+    visibility: visible;
+    height: auto; /* Let it take space */
+    transition: opacity 0.4s ease 0.2s; /* Add a slight delay */
+}
+
+/* --- UPDATED: BRIGHTER GLOW ON HOVER --- */
+#box7:hover .bu1,
+#box8:hover .bu2,
+#box9:hover .bu3,
+#box10:hover .bu4 {
+    /* top: 30px; <-- REMOVED SLIDE */
+    filter: brightness(1.3); /* Made brighter */
+    box-shadow: 0 0 20px 5px gold; /* Made glow larger/brighter */
+}
+
+
+/* --- NEW: SHINE ANIMATION (PSEUDO-ELEMENT) --- */
+.bu1::before, .bu2::before, .bu3::before, .bu4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right, 
+      rgba(255, 215, 0, 0) 0%, 
+      rgba(255, 215, 0, 0.7) 50%, 
+      rgba(255, 215, 0, 0) 100%
+    );
+    transform: skewX(-25deg); /* Angled shine */
+    transition: left 0.7s ease;
+}
+
+/* --- NEW: TRIGGER SHINE ON HOVER --- */
+#box7:hover .bu1::before,
+#box8:hover .bu2::before,
+#box9:hover .bu3::before,
+#box10:hover .bu4::before {
+    left: 100%; /* Move across the button */
+}
+
+
+/* --- END OF CARD HOVER FIX --- */
+
+
+
+/* --- START OF RESPONSIVE MEDIA QUERIES --- */
+
+/* For tablets (stack initiative boxes 2x2) */
+@media (max-width: 1250px) { /* Lowered breakpoint */
+    #box7, #box8, #box9, #box10 {
+        width: 48%; /* Two boxes per row */
+        margin: 1%; /* Add some spacing */
+        height: auto; /* Auto-height */
+        padding: 30px;
+        min-height: 350px; /* Keep min-height */
+    }
+
+    /* Force #box9 to start a new row */
+    #box9 {
+        clear: left;
+    }
+
+    #con {
+        margin-left: 700px; /* Adjust margin for smaller screen */
+    }
+}
+
+
+/* For mobile devices (stack everything vertically) */
+@media (max-width: 768px) {
+    .navbar li {
+        float: none;
+        text-align: center;
+    }
+    .navbar a {
+        right: 0;
+    }
+    .img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+    header {
+        text-align: center;
+    }
+
+    .our {
+        font-size: x-large;
+    }
+    .para {
+        font-size: large;
+        margin: 20px;
+    }
+    #box5 {
+        margin: 30px 10px;
+    }
+
+    /* Stack initiative boxes */
+    #box7, #box8, #box9, #box10 {
+        float: none;
+        width: 90%;
+        height: auto;
+        min-height: 350px; /* Keep min-height */
+        margin: 20px auto; /* Center and space them */
+        padding: 20px;
+    }
+
+    /* Stack footer columns */
+    #bo, #lin, #r, #l, #con {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        padding: 15px 20px; /* Add padding */
+        text-align: center;
+    }
+    #con {
+        margin-left: 0; /* Reset margin */
+    }
+    .box6 { /* Center the logo/location in footer */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --- END OF RESPONSIVE MEDIA QUERIES --- */
+
+.INCU{
+font-size: smaller;
+}
+.NE{
+  font-size: small;
+}
+.ENSPIRE{
+  font-size: smaller;
+}
+.ALMUNI{
+  font-size: small;
+}
+
+.bu1{
+  margin-left: 15px;
+  position: relative;
+  left: 0; /* Reset position */ 
+  transform: none; /* Reset transform */
+  margin-top: 15px; /* Add some space */
+
+  /* Override existing styles */
+    background: linear-gradient(to right, red, #c00);
+    background-color: red;
+    color: white;
+    padding: 10px 20px; /* Make buttons bigger */
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* Reset bad positioning */
+    position: relative;
+    left: 0; 
+    margin-top: 55px; /* Space below title */
+    
+    /* --- UPDATED: Added position and overflow for shine --- */
+    overflow: hidden;
+
+    /* Transition for hover effect */
+    /* --- UPDATED: Added box-shadow and filter to transition --- */
+    transition: opacity 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    opacity: 1; /* Visible by default */
+    cursor: pointer; /* Ensure it's clickable */
+    
+    /* REMOVED 'pointer-events: none;' */
+}
+
+.bu2{
+  /* Base styles */
+  background: linear-gradient(to right, red, #c00);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  
+  /* --- UPDATED: Added position and overflow for shine --- */
+  position: relative;
+  overflow: hidden; 
+
+  /* Offset positioning */
+  left: 80px; /* This is the offset you wanted to keep */
+  /* --- UPDATED: BUTTONS SHIFTED DOWN --- */
+  margin-top: 5px; /* Was 20px */
+  
+  /* Interaction */
+  opacity: 1;
+  cursor: pointer;
+
+  /* --- UPDATED FOR SLIDE DOWN --- */
+  top: 0; /* Starting vertical position */
+  /* --- UPDATED: Added box-shadow and filter to transition --- */
+  transition: opacity 0.4s ease, top 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.bu3{
+  /* Base styles */
+  background: linear-gradient(to right, red, #c00);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+
+  /* --- UPDATED: Added position and overflow for shine --- */
+  position: relative;
+  overflow: hidden; 
+  
+  /* Offset positioning */
+  left: 20px; /* This is the offset you wanted to keep */
+  /* --- UPDATED: BUTTONS SHIFTED DOWN --- */
+  margin-top: 50px; /* Was 20px */
+  
+  /* Interaction */
+  opacity: 1;
+  cursor: pointer;
+
+  /* --- UPDATED FOR SLIDE DOWN --- */
+  top: 0; /* Starting vertical position */
+  /* --- UPDATED: Added box-shadow and filter to transition --- */
+  transition: opacity 0.4s ease, top 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+
+/* ===============================
+  FOOTER SECTION
+=============================== */
+.footer-content {
+    background-color: #000;
+    color: var(--text-light, #fff);
+    padding: 60px 50px;
+    border-radius: 16px 16px 0 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Layout container */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* -------- Left Section (Logo + Address) -------- */
+.footer-logo-section {
+    flex: 1 1 300px;
+}
+
+.footer-logo-section img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* -------- Right Section (Links) -------- */
+.footer-links-section {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: nowrap; /* keep everything on one line */
+}
+
+/* Each column (Quick Links, Resources, Legal, Contact) */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-light, #fff);
+    position: relative;
+}
+
+/* Link styling */
+.footer-column a {
+    text-decoration: none;
+    color: var(--text-light, #ddd);
+    font-size: 16px;
+    transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #f9c802; /* E-Cell yellow hover */
+}
+
+/* -------- Social Links Section -------- */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item img {
+    /* Styles for ALL images */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: brightness(0) invert(1); /* Keep for SVG/monochromatic icons */
+}
+
+.social-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(81%) sepia(68%) saturate(727%) hue-rotate(7deg) brightness(103%) contrast(103%);
+    /* yellow tint on hover */
+}
+
+
+.social-item img[alt="Twitter"] {
+    /* Remove the harsh filter that works poorly on non-SVG/non-monochromatic PNGs */
+    filter: none; 
+    
+    /* Ensure the hover effect doesn't break it either */
+    transition: transform 0.2s ease; /* Keep the transform */
+}
+
+.social-item img[alt="Twitter"]:hover {
+    /* Set the filter back to 'none' on hover if you don't want the gold color */
+    filter: none;
+    transform: scale(1.1);
+}
+
+.social-item a {
+    color: var(--text-light, #ddd);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.social-item a:hover {
+    color: #f9c802;
+}
+
+/* -------- Divider + Copyright -------- */
+.footer-divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-light, #333);
+    margin: 60px 0 20px;
+    border-radius: 2px;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-light, #bbb);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+@media (max-width: 1200px) {
+    .footer-links-section {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-section img {
+        width: 130px;
+    }
+
+    .footer-links-section {
+        justify-content: center;
+        flex-wrap: wrap; /* allows wrapping on medium screens */
+        gap: 40px;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 40px 20px;
+    }
+
+    .footer-links-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 15px;
+    }
+
+    .social-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo-section img {
+        width: 100px;
+    }
+
+    .footer-content {
+        padding: 35px 15px;
+    }
+
+    .footer-links-section {
+        gap: 25px;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV MENU */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.25s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-nav a:hover {
+    color: #f9c802;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 1024px) {
+    nav {
+        display: none; 
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

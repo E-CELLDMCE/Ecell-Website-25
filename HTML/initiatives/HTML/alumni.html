@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-CELL DMCE | ALUMNI</title>
+
+  <!-- External CSS (optional if you still use it) -->
+  <link rel="stylesheet" href="../CSS/alumni.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/alumni/img_frame_2.svg">
+
+  <style>
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <a href="https://e-celldmce.github.io/ecelldmcehome/" target="_blank">
+        <img src="../images/alumni/ecell_logo.png" alt="E-CELL Logo" />
+      </a>
+
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="/ecell final/Home.html">HOME</a></li>
+          <li><a href="/ecell final/HTML/aboutus.html">ABOUT US</a></li>
+          <li><a href="/ecell final/HTML/event.html">EVENT</a></li>
+          <li><a href="/ecell final/HTML/gallery.html">GALLERY</a></li>
+          <li><a href="/ecell final/HTML/Team_Members.html">TEAM</a></li>
+          <li><a href="#initiative" class="active">INITIATIVE</a></li>
+          <li><a href="/ecell final/HTML/contact.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Mobile nav links -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="/ecell final/Home.html">HOME</a>
+      <a href="/ecell final/HTML/aboutus.html">ABOUT US</a>
+      <a href="/ecell final/HTML/event.html">EVENT</a>
+      <a href="/ecell final/HTML/gallery.html">GALLERY</a>
+      <a href="/ecell final/HTML/Team_Members.html">TEAM</a>
+      <a href="#initiative" class="active">INITIATIVE</a>
+      <a href="/ecell final/HTML/contact.html">CONTACT US</a>
+    </div>
+  </header>
+
+  <!-- ALUMNI PAGE -->
+  <section class="alumni-page" id="initiative">
+    <!-- HERO -->
+    <div class="alumni-hero">
+      <img src="../images/alumni/alumni_logo.png" alt="Alumni Logo" class="logo">
+      <div class="title-wrap">
+        <h1 class="alumni-title">ALUMNI</h1>
+        <div class="alumni-tag">BRIDGING IDEAS ACROSS GENERATIONS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="alumni-about">
+    <h2>About Alumni</h2>
+    <p>
+      The Alumni Initiative of our E-Cell keeps the bond alive between those who once dreamt here and those who are dreaming now.
+      Through this platform, we bring together alumni and current students so that ideas, stories, and experiences can flow both ways.
+      Alumni share lessons learned — the wins, the struggles, and the journeys beyond college — while students gain insight and inspiration.
+      Our vision is to create a space where the spirit of entrepreneurship never stops growing, where every generation supports the next.
+      It’s not just about giving back — it’s about moving forward together as one community of innovators and doers.
+    </p>
+  </section>
+
+  <!-- CONTACT / INITIATIVE HEAD -->
+  <section id="contact" class="contact-section">
+    <h2><span class="gradient-text">CONTACT US</span></h2>
+    <div class="contact-container">
+      <div class="contact-image-box">
+        <div class="contact-image">
+          <img src="../images/alumni/aditya_pic.png" alt="Aditya Dongare" />
+        </div>
+      </div>
+      <div class="contact-info">
+        <h3>ADITYA DONGARE</h3>
+        <p>Initiative Head<br>(ALUMNI)</p>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/aditya-dongre-919505373" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+          </a>
+          <a href="mailto:adityadongre25ecell@gmail.com">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <img src="../images/alumni/ecell_logo.png" alt="E-CELL Logo" class="footer-logo">
+        <p>📍 Location: Datta Meghe College of Engineering, Sector 3, Airoli, Navi Mumbai - 400708</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Quick Links</h4>
+          <a href="/ecell final/Home.html">Home</a>
+          <a href="/ecell final/HTML/aboutus.html">About us</a>
+          <a href="/ecell final/HTML/event.html">Event</a>
+          <a href="/ecell final/HTML/gallery.html">Gallery</a>
+          <a href="/ecell final/HTML/Team_Members.html">Team</a>
+          <a href="/ecell final/HTML/contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">FAQs</a>
+          <a href="#">Register</a>
+          <a href="#">Volunteer</a>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>✉ ecell@dmce.ac.in</p>
+          <p>📸 ecell_dmce</p>
+          <p>🔗 ECell_DMCE</p>
+          <p>📘 ECell_DMCE</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ECELL | E-CELL DMCE. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- NAVBAR SCRIPT (HAMBURGER) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const mobileNav = document.getElementById("mobileNav");
+
+      if (hamburgerBtn && mobileNav) {
+        hamburgerBtn.addEventListener("click", function () {
+          mobileNav.classList.toggle("active");
+        });
+
+        // Close mobile nav when a link is clicked
+        const links = mobileNav.querySelectorAll("a");
+        links.forEach(link => {
+          link.addEventListener("click", () => {
+            mobileNav.classList.remove("active");
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Moments - Gallery| ECELL DMCE </title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Homenaje:wght@400&family=Instrument+Sans:wght@400;500;600;700&family=Kaisei+Decol:wght@400;500;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;600;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <link rel="icon" type="image/png" href="../images/images/img_frame_2.svg">
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../HTML/Landing_page.html"><img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo"></a>
+                <span class="logo-text"></span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <nav>
+                <a href="../Home.html">HOME</a>
+                <a href="../HTML/aboutus.html">ABOUT US</a>
+                <a href="../HTML/event.html">EVENT</a>
+                <a href="../HTML/gallery.html" class="active">GALLERY</a> 
+                <a href="../HTML/Team_Members.html">TEAM</a>
+                <a href="../HTML/intiaitive.html">INITIATIVE</a>
+                <!--<a href="#blogs">BLOGS</a> -->
+                <a href="../HTML/contact.html">CONTACT US</a>
+            </nav>  
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../Home.html">HOME</a>
+            <a href="../HTML/aboutus.html">ABOUT US</a>
+            <a href="../HTML/event.html">EVENT</a>
+            <a href="../HTML/gallery.html" class="active">GALLERY</a>
+            <a href="../HTML/Team_Members.html">TEAM</a>
+            <a href="../HTML/intiaitive.html">INITIATIVE</a>
+            <!--<a href="#blogs">BLOGS</a> -->
+            <a href="../HTML/contact.html">CONTACT US</a>
+        </div>
+    </header>
+    <main class="main-content">
+        <h1 class="page-title">OUR MOMENTS</h1>
+        
+        <div class="featured-image">
+            <img src="../images/Event_img/main.jpg" alt="Featured Moment" id="featured-img">
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment1.jpg')">
+                <img src="../images/Event_img/1.jpg" alt="Gallery Moment 1">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment2.jpg')">
+                <img src="../images/Event_img/2.jpg" alt="Gallery Moment 2">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment3.jpg')">
+                <img src="../images/Event_img/3.jpg" alt="Gallery Moment 3">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment4.jpg')">
+                <img src="../images/Event_img/4.jpg" alt="Gallery Moment 4">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment5.jpg')">
+                <img src="../images/Event_img/5.jpg" alt="Gallery Moment 5">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment6.jpg')">
+                <img src="../images/Event_img/6.jpg" alt="Gallery Moment 6">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment7.jpg')">
+                <img src="../images/Event_img/7.jpg" alt="Gallery Moment 7">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment8.jpg')">
+                <img src="../images/Event_img/8.jpg" alt="Gallery Moment 8">
+            </div>
+            
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment9.jpg')">
+                <img src="../images/Event_img/9.jpg" alt="Gallery Moment 9">
+            </div>
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment9.jpg')">
+                <img src="../images/Event_img/10.jpg" alt="Gallery Moment 10">
+            </div>
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment9.jpg')">
+                <img src="../images/Event_img/11.jpg" alt="Gallery Moment 11">
+            </div>
+            <div class="gallery-item" onclick="openModal('../imgs/gallery/moment9.jpg')">
+                <img src="../images/Event_img/12.jpg" alt="Gallery Moment 12">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-logo-section">
+                    <img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo">
+                    <p>📍 Location: Datta Meghe College of Engineering, Sector 3, Airoli, Navi Mumbai - 400708</p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <a href="/ecell final/Home.html">Home</a>
+                            <a href="../ecell final/HTML/aboutus.html">About Us</a>
+                            <a href="../ecell final/HTML/event.html">Event</a>
+                            <a href="../ecell final/HTML/gallery.html">Gallery</a>
+                            <a href="../ecell final/HTML/Team_Members.html">Team</a>
+                            <a href="../ecell final/HTML/intiaitive.html">INITIATIVES</a>
+                            <a href="../ecell final/HTML/contact.html">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <a href="#">FAQs</a>
+                        <a href="#">Register</a>
+                        <a href="#">Volunteer</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+
+                    <div class="footer-column social-links">
+                        <h3>Contact Us</h3>
+                        <div class="social-item">
+                            <img src="../images/images/facebook.svg" alt="Facebook">
+                            <a href="https://facebook.com/ecell.dmce" target="_blank">ECell_DMCE</a>
+                        </div>
+                        <div class="social-item">
+                            <img src="../images/images/instagram.svg" alt="Instagram">
+                            <a href="https://instagram.com/ecell.dmce" target="_blank">@ecell.dmce</a>
+                        </div>
+                        <div class="social-item">
+                            <img src="../images/images/linkedin.svg" alt="LinkedIn">
+                            <a href="https://linkedin.com/company/ecell-dmce" target="_blank">E-CELL DMCE</a>
+                        </div>
+                        <div class="social-item">
+                            <img src="../images/Icons/twitter.png" alt="Twitter">
+                            <a href="https://x.com/Ecell_DMCE?t=gVBEpW_3KJ-k_l489b9SNg&s=08" target="_blank">E-CELL DMCE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+            <p class="copyright">© 2025 ECELL | E-CELL DMCE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Modal Image">
+        </div>
+    </div>
+
+    <script src="../JS/gallery.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

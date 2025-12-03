@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us | E-Cell DMCE </title>
+    <meta name="description"
+        content="Learn about the history and mission of E-CELL DMCE at Datta Meghe College of Engineering.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Homenaje:wght@400&family=Instrument+Sans:wght@400;500;600;700&family=Kaisei+Decol:wght@400;500;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;600;700&family=Oxygen:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../CSS/aboutus.css">
+    <link rel="icon" type="image/png" href="../images/images/img_frame_2.svg">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../HTML/Landing_page.html"><img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo"></a>
+                <span class="logo-text"></span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <nav>
+                <a href="../Home.html">HOME</a>
+                <a href="../HTML/aboutus.html" class="active">ABOUT US</a>
+                <a href="../HTML/event.html">EVENT</a>
+                <a href="../HTML/gallery.html">GALLERY</a> 
+                <a href="../HTML/Team_Members.html">TEAM</a>
+                <a href="../HTML/intiaitive.html">INITIATIVE</a>
+                <!--<a href="#blogs">BLOGS</a> -->
+                <a href="../HTML/contact.html">CONTACT US</a>
+            </nav>  
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../Home.html">HOME</a>
+            <a href="../HTML/aboutus.html" class="active">ABOUT US</a>
+            <a href="../HTML/event.html">EVENT</a>
+            <a href="../HTML/gallery.html">GALLERY</a>
+            <a href="../HTML/Team_Members.html">TEAM</a>
+            <a href="../HTML/intiaitive.html">INITIATIVE</a>
+            <!--<a href="#blogs">BLOGS</a> -->
+            <a href="../HTML/contact.html">CONTACT US</a>
+        </div>
+    </header>
+    <div id="ecell-page" class="page-container">
+        <section class="ecell-section" style="background: #000; color: white;">
+            <div class="ecell-hero">
+                <div>
+                    <img src="../images/images/Aboutus.png" alt="Dashboard" class="ecell-image">
+                </div>
+                <div>
+                    <h1 class="ecell-title">ORIGIN OF E-CELL</h1>
+                    <p class="ecell-text">
+                        To empower students to transform entrepreneurial ideas into impactful ventures by
+                        cultivating a culture of innovation, execution, and continuous learning.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="reach-section">
+            <h2 class="reach-title">OUR REACH</h2>
+            <div class="reach-grid">
+                <div class="reach-card"> <svg class="reach-icon" fill="white" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                    <h3 style="color: white; font-size: 1.25rem; font-weight: bold;">Facebook</h3>
+                    <div class="reach-value">0+</div>
+                    <p style="color: #d1d5db;">followers</p>
+                </div>
+                <div class="reach-card">
+                    <svg class="reach-icon" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                    <h3 style="color: white; font-size: 1.25rem; font-weight: bold;">Instagram</h3>
+                    <div class="reach-value">0+</div>
+                    <p style="color: #d1d5db;">followers</p>
+                </div>
+                <div class="reach-card"> <svg class="reach-icon" fill="white" viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                        </path>
+                    </svg>
+                    <h3 style="color: white; font-size: 1.25rem; font-weight: bold;">LinkedIn</h3>
+                    <div class="reach-value">0+</div>
+                    <p style="color: #d1d5db;">followers</p>
+                </div>
+                <div class="reach-card"> <svg class="reach-icon" fill="white" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.497 11.24H16.21l-5.223-6.83-5.976 6.83H1.702l7.72-8.813L1.25 2.25h5.787l4.713 6.178L18.244 2.25zm-1.16 18.104h1.833L7.084 4.047H5.117l11.967 16.307z"></path>
+                    </svg>
+                    <h3 style="color: white; font-size: 1.25rem; font-weight: bold;">X (Twitter)</h3>
+                    <div class="reach-value">0+</div>
+                    <p style="color: #d1d5db;">Followers</p>
+                </div>
+            </div>
+        </section>
+        <section class="timeline-section">
+            <h2 class="timeline-title">OUR HISTORY</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2014</h3>
+                        <div class="timeline-description">
+                            <p><strong>The Entrepreneurship Cell of Datta Meghe College of Engineering (E-CELL,
+                                    DMCE)</strong> was founded
+                                in <strong>August 2014 by Mr. Ankit Jaiswal</strong>, a B.E. student from the
+                                <strong>Electronics Department</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2015</h3>
+                        <div class="timeline-description">
+                            <p><strong>Held the first edition of Enspire</strong> – the flagship event of E-Cell.
+                                Enspire 2015 was a guest lecture event held on <strong>24th January 2015</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2018</h3>
+                        <div class="timeline-description">
+                            <p><strong>Triumph at NEC (National Entrepreneurship Challenge)</strong>.
+                                DMCE achieved a remarkable milestone by <strong>winning the Basic Track</strong>
+                                organized by
+                                <strong>E-Cell, IIT Bombay</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2024</h3>
+                        <div class="timeline-description">
+                            <p>Secured <strong>5th position</strong> in the <strong>State Entrepreneurship Challenge
+                                    2024</strong>.
+                                Made it to the <strong>Top 20 teams in India</strong> in the <strong>National
+                                    Entrepreneurship Challenge 2024</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2025</h3>
+                        <div class="timeline-description">
+                            <p>Enspire 2025, the flagship two-day event of E-CELL DMCE, blended
+                                <strong>learning, innovation, and fun</strong>. Featured speaker sessions, competitions,
+                                and entertainment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-logo-section">
+                        <img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo">
+                        <p>📍 Location: Datta Meghe College of Engineering, Sector 3, Airoli, Navi Mumbai - 400708</p>
+                    </div>
+
+                    <div class="footer-links-section">
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <a href="../Home.html">Home</a>
+                            <a href="../HTML/aboutus.html">About Us</a>
+                            <a href="../HTML/event.html">Event</a>
+                            <a href="../HTML/gallery.html">Gallery</a>
+                            <a href="../HTML/Team_Members.html">Team</a>
+                            <a href="../HTML/intiaitive.html">INITIATIVES</a>
+                            <a href="../HTML/contact.html">Contact</a>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>Resources</h3>
+                            <a href="#">FAQs</a>
+                            <a href="#">Register</a>
+                            <a href="#">Volunteer</a>
+                        </div>
+
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+
+                        <div class="footer-column social-links">
+                            <h3>Contact Us</h3>
+
+                            <div class="social-item">
+                                <img src="../images/images/facebook.svg" alt="Facebook">
+                                <a href="https://www.facebook.com/ecelldmce/" target="_blank">ECell_DMCE</a>
+                            </div>
+
+                            <div class="social-item">
+                                <img src="../images/images/instagram.svg" alt="Instagram">
+                                <a href="https://www.instagram.com/ecell_dmce?igsh=MWx0Y254dnFvZThrMA==" target="_blank">@ecell.dmce</a>
+                            </div>
+
+                            <div class="social-item">
+                                <img src="../images/images/linkedin.svg" alt="LinkedIn">
+                                <a href="https://www.linkedin.com/company/e-cell-dmce/" target="_blank">E-CELL DMCE</a>
+                            </div>
+
+                            <div class="social-item">
+                                <img src="../images/Icons/twitter.png" alt="Twitter">
+                                <a href="https://x.com/Ecell_DMCE?t=gVBEpW_3KJ-k_l489b9SNg&s=08" target="_blank">E-CELL DMCE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="copyright">© 2025 ECELL | E-CELL DMCE. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../JS/aboutus.js"></script>
+</body>
+</html>

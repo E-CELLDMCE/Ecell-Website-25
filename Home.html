@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-CELL DMCE | Entrepreneurship Cell - Dream, Dare, Develop</title>
+    <meta name="description" content="Official website of E-CELL DMCE - 10 years of fostering innovation and entrepreneurship at Datta Meghe College of Engineering.">
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Homenaje:wght@400&family=Instrument+Sans:wght@400;500;600;700&family=Kaisei+Decol:wght@400;500;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;600;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/landing.css">
+    <link rel="icon" type="image/png" href="./images/images/img_frame_2.svg">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content" id="mainHeader">
+            <div class="logo-section">
+                <a href="#"><img src="./images/Logo/logo.png" alt="E-CELL DMCE Logo"></a>
+                <span class="logo-text"></span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <nav>
+                <a href="#" class="active">HOME</a>
+                <a href="./HTML/aboutus.html">ABOUT US</a>
+                <a href="./HTML/event.html">EVENT</a>
+                <a href="./HTML/gallery.html">GALLERY</a>
+                <a href="./HTML/Team_Members.html">TEAM</a>
+                <a href="./HTML/intiaitive.html">INITIATIVES</a>
+                <a href="./HTML/contact.html">CONTACT US</a>
+            </nav>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#" class="active">HOME</a>
+                <a href="./HTML/aboutus.html">ABOUT US</a>
+                <a href="./HTML/event.html">EVENT</a>
+                <a href="./HTML/gallery.html">GALLERY</a>
+                <a href="./HTML/Team_Members.html">TEAM</a>
+                <a href="./HTML/intiaitive.html">INITIATIVES</a>
+                <a href="./HTML/contact.html">CONTACT US</a>
+        </div>
+    </header>
+
+    <!-- Scroll-driven zoom animation section -->
+    <div class="scroll-container" id="scrollContainer">
+        <section class="zoom-section" id="zoomSection">
+            <!-- Added silk background image element -->
+            <div class="zoom-background" id="zoomBackground"></div>
+            
+            <!-- Changed to a div to group zoom-related elements -->
+            <div class="zoom-content">
+                <h1 class="zoom-title" id="zoomTitle">
+                    <span class="letter-e">E</span><span class="letter-rest">-CELL DMCE</span>
+                </h1>
+                <p class="zoom-tagline" id="zoomTagline">DREAM.DARE.DEVELOP</p>
+            </div>
+            
+            <!-- Video container that appears when zoomed -->
+            <div class="video-container" id="videoContainer">
+                <video id="mainVideo" playsinline>
+                    <!-- Replace with your actual video source -->
+                    <source src="./images/video/recap.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay" id="videoOverlay">
+                    <div class="play-btn"></div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator" id="scrollIndicator">
+                <span>SCROLL TO EXPLORE</span>
+                <div class="mouse"></div>
+            </div>
+
+            <!-- Continue scrolling indicator (appears after video) -->
+            <div class="continue-indicator" id="continueIndicator">
+                <span>CONTINUE SCROLLING</span>
+                <div class="arrows">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Main content that appears after video -->
+    <div class="main-content" id="mainContent">
+        <section class="hero">
+            <!-- Added actual background elements instead of using ::before pseudo-element -->
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>E-CELL DMCE</h1>
+                <p>DREAM.DARE.DEVELOP</p>
+                <!--- <div class="know-more-btn">
+                    <span>KNOW MORE</span>
+                    <img src="./images/images/Forward_arrow.svg" alt="Arrow">
+                </div> -->
+            </div>
+        </section>
+
+        <section class="what-is-ecell">
+            <h2>WHAT IS E-CELL ?</h2>
+            <p>
+                Entrepreneurship Cell of Datta Meghe College of Engineering is a student-driven
+                community dedicated to promoting innovation, creativity, and the spirit of
+                entrepreneurship. It serves as a platform where students can learn, network, and turn
+                ideas into successful ventures through workshops, competitions, mentorship, and industry
+                collaborations.
+            </p>
+            <div class="stats-container">
+                <div class="stats">
+                    <div class="stat-item" id="years">
+                        <p><span class="counter" data-target="11">0</span><br>YEARS</p>
+                    </div>
+                    <div class="stat-item" id="heads">
+                        <p><span class="counter" data-target="14">0</span><br>HEADS</p>
+                    </div>
+                    <div class="stat-item" id="members">
+                        <p><span class="counter" data-target="100">0</span>+<br>MEMBERS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="initiatives">
+            <div class="initiatives-content">
+                <h2>OUR INITIATIVES</h2>
+                <div class="initiatives-grid">
+                    <div class="initiative-card">
+                        <img src="./images/Logo/Incubation.png" alt="Incubation Cell">
+                        <h3>INCUBATION CELL</h3>
+                    </div>
+                    <div class="initiative-card">
+                        <img src="./images/Logo/NEC.png" alt="NEC">
+                        <h3>NATIONAL ENTREPRENEURSHIP CHALLENGE</h3>
+                    </div>
+                    <div class="initiative-card">
+                        <img src="./images/Logo/Alumni.png" alt="Alumni">
+                        <h3>ALUMINI CELL</h3>
+                    </div>
+                    <div class="initiative-card">
+                        <img src="./images/Logo/Enspire.png" alt="Enspire">
+                        <h3>ENSPIRE EVENT</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsors">
+            <h2>OUR SPONSORS</h2>
+            <div class="sponsors-carousel">
+                <div class="sponsors-track" id="sponsorsTrack"></div>
+            </div>
+        </section>
+
+        <section class="speakers">
+            <h2>OUR PREVIOUS SPEAKERS</h2>
+            <div class="speakers-carousel">
+                <div class="speakers-track" id="speakersTrack"></div>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="team-content">
+                <h2>E-CELL'S BACKBONE</h2>
+                <p class="team-description">
+                    E-CELL of DMCE was founded in August, 2014 by Mr. Ankit Jaiswal student of Electronics
+                    Engineering. The Faculty coordinator was Late Mr. Sameer Ekbote and Faculty advisor
+                    Dr. Aruna Henry
+                </p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <div class="team-member-inner">
+                                <img src="./images/Faculty/Ekbote_Sir.png" alt="Late Mr. Sameer Ekbote">
+                            </div>
+                        </div>
+                        <h3>Late Mr. Sameer Ekbote</h3>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <div class="team-member-inner">
+                                <img src="./images/Faculty/Aruna_Ma'am.png" alt="Dr. Aruna Henry">
+                            </div>
+                        </div>
+                        <h3>Dr. Aruna Henry</h3>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <div class="team-member-inner">
+                                <img src="./images/Faculty/Meghana_Ma'am.png" alt="Dr. Meghana Chatterjee">
+                            </div>
+                        </div>
+                        <h3>Dr. Meghana Chatterjee</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advisors">
+            <div class="advisors-content">
+                <h2>E-CELL ADVISOR</h2>
+                <div class="advisors-grid">
+                    <div class="advisor-card">
+                        <div class="advisor-image">
+                            <div class="advisor-inner">
+                                <img src="./images/Faculty/Anand_Sir.png" alt="Prof. Anand Joshi">
+                            </div>
+                            <br>
+                            <h3>Prof. Anand Joshi</h3>
+                        </div>
+                    </div>
+                    <div class="advisor-card">
+                        <div class="advisor-image">
+                            <div class="advisor-inner">
+                                <img src="./images/Faculty/Deepali_Ma'am.png" alt="Prof. Deepali Kadam">
+                            </div>
+                            <br>
+                            <h3>Prof. Deepali Kadam</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <div class="footer-logo-section">
+                        <img src="../ecell final/images/Logo/logo.png" alt="E-CELL DMCE Logo">
+                        <p>📍 Location: Datta Meghe College of Engineering, Navi Mumbai</p>
+                    </div>
+                    <div class="footer-links-section">
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <a href="/">Home</a>
+                            <a href="../ecell final/HTML/aboutus.html">About Us</a>
+                            <a href="../ecell final/HTML/event.html">Event</a>
+                            <a href="../ecell final/HTML/gallery.html">Gallery</a>
+                            <a href="../ecell final/HTML/Team_Members.html">Team</a>
+                            <a href="../ecell final/HTML/intiaitive.html">INITIATIVES</a>
+                            <a href="../ecell final/HTML/contact.html">Contact</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Resources</h3>
+                            <a href="#">FAQs</a>
+                            <a href="#">Register</a>
+                            <a href="#">Volunteer</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <div class="footer-column social-links">
+                            <h3>Contact Us</h3>
+                            <div class="social-item">
+                                <img src="../ecell final/images/Icons/Facebook.png" alt="Facebook">
+                                <a href="https://www.facebook.com/ecelldmce/" target="_blank">ECell_DMCE</a>
+                            </div>
+                            <div class="social-item">
+                                <img src="../ecell final/images/images/Instagram.svg" alt="Instagram">
+                                <a href="https://www.instagram.com/ecell_dmce?igsh=MWx0Y254dnFvZThrMA==" target="_blank">ecell_dmce</a>
+                            </div>
+                            <div class="social-item">
+                                <img src="../ecell final/images/images/linkedin.svg" alt="LinkedIn">
+                                <a href="https://www.linkedin.com/company/e-cell-dmce/" target="_blank">E-CELL DMCE</a>
+                            </div>
+                            <div class="social-item">
+                                <img src="../ecell final/images/Icons/twitter.png" alt="Twitter">
+                                <a href="https://x.com/Ecell_DMCE?t=gVBEpW_3KJ-k_l489b9SNg&s=08" target="_blank">E-CELL DMCE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="copyright">© 2025 ECELL | E-CELL DMCE. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../ecell final/JS/Landing.js"></script>
+</body>
+</html>

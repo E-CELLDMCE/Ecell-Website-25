@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT US | E-Cell DMCE</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Homenaje:wght@400&family=Instrument+Sans:wght@400;500;600;700&family=Kaisei+Decol:wght@400;500;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;600;700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="icon" type="image/png" href="../images/images/img_frame_2.svg">
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../HTML/Landing_page.html"><img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo"></a>
+                <span class="logo-text"></span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <nav class="custom-nav">
+                <a href="../Home.html">HOME</a>
+                <a href="../HTML/aboutus.html">ABOUT US</a>
+                <a href="../HTML/event.html">EVENT</a>
+                <a href="../HTML/gallery.html">GALLERY</a>
+                <a href="../HTML/Team_Members.html">TEAM</a>
+                <a href="../HTML/intiaitive.html">INITIATIVE</a>
+                <a href="../HTML/contact.html" class="active">CONTACT US</a>
+            </nav>  
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="../Home.html">HOME</a>
+            <a href="../HTML/aboutus.html">ABOUT US</a>
+            <a href="../HTML/event.html">EVENT</a>
+            <a href="../HTML/gallery.html">GALLERY</a>
+            <a href="../HTML/Team_Members.html">TEAM</a>
+            <a href="../HTML/intiaitive.html">INITIATIVE</a>
+            <a href="../HTML/contact.html" class="active">CONTACT US</a>
+        </div>
+    </header>
+    <section class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch with E-Cell DMCE</h2>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3>Contact Information</h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Email:</strong> <a href="mailto:contact@ecelldmce.org" class="text-white">ecell@dmce.ac.in</a></li>
+                        <li><strong>Phone:</strong> +91 8928419924 [ Abhin Shetty, Co-Chairperson (I.R)]</li>
+                        <li><strong>Address:</strong> Datta Meghe College of Engineering, Airoli, Navi Mumbai  - 400708</li>
+                    </ul>
+
+                    <h4>Our Location</h4>
+                    <div class="embed-responsive embed-responsive-16by9 mb-4">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2276.7289370857084!2d72.99408437004129!3d19.160196865006974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf4daf8967d9%3A0xdd90bed2058f7eaa!2sDatta%20Meghe%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1729960030798!5m2!1sen!2sin"
+                            width="100%" height="300" allowfullscreen=""></iframe>
+                    </div>
+
+                    <h4 class="mt-4">Follow Us</h4>
+                    <div class="d-flex flex-column flex-md-row gap-2">
+                        <a href="https://www.instagram.com/ecell_dmce?igsh=MWx0Y254dnFvZThrMA==" target="_blank" class="btn btn-outline-primary">
+                            <img src="../images/Icons/instaicon.jpeg" alt="Instagram" width="24px"> 
+                        </a>
+                        <a href="https://www.linkedin.com/company/e-cell-dmce/" target="_blank" class="btn btn-outline-primary">
+                            <img src="../images/Icons/linkdinicon.png" alt="LinkedIn" width="24px"> 
+                        </a>
+                        <a href="https://www.instagram.com/ecell_uphub.official?igsh=MW54aHRzZjdxMXpxaQ==" target="_blank" class="btn btn-outline-primary">
+                            <img src="../images/Icons/uphub.jpg" alt="Instagram" width="24px"> 
+                        </a>
+                        <a href="https://www.facebook.com/ecelldmce/" target="_blank" class="btn btn-outline-primary">
+                            <img src="../images/Icons/Facebook.png" alt="Facebook" width="24px"> 
+                        </a>
+                        <a href="https://x.com/Ecell_DMCE?t=gVBEpW_3KJ-k_l489b9SNg&s=08" target="_blank" class="btn btn-outline-primary">
+                            <img src="../images/Icons/twitter.png" alt="Twitter" width="24px"> 
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-logo-section">
+                    <img src="../images/Logo/logo.png" alt="E-CELL DMCE Logo">
+                    <p>📍 Location: Datta Meghe College of Engineering, Sector 3, Airoli, Navi Mumbai</p>
+                </div>
+
+                <div class="footer-links-section">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <a href="../Home.html">Home</a>
+                            <a href="../HTML/aboutus.html">About Us</a>
+                            <a href="../HTML/event.html">Event</a>
+                            <a href="../HTML/gallery.html">Gallery</a>
+                            <a href="../HTML/Team_Members.html">Team</a>
+                            <a href="../HTML/intiaitive.html">INITIATIVES</a>
+                            <a href="../HTML/contact.html">Contact</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <a href="#">FAQs</a>
+                        <a href="#">Register</a>
+                        <a href="#">Volunteer</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+
+                    <div class="footer-column social-links">
+                        <h3>Contact Us</h3>
+                        <div class="social-item">
+                            <img src="../images/images/facebook.svg" alt="Facebook">
+                            <a href="https://facebook.com/ecell.dmce" target="_blank">ECell_DMCE</a>
+                        </div>
+                        <div class="social-item">
+                            <img src="../images/images/instagram.svg" alt="Instagram">
+                            <a href="https://instagram.com/ecell.dmce" target="_blank">@ecell.dmce</a>
+                        </div>
+                        <div class="social-item">
+                            <img src="../images/images/linkedin.svg" alt="LinkedIn">
+                            <a href="https://linkedin.com/company/ecell-dmce" target="_blank">E-CELL DMCE</a>
+                        </div>
+                        <div class="social-item">
+                                <img src="../images/Icons/twitter.png" alt="Twitter">
+                                <a href="https://x.com/Ecell_DMCE?t=gVBEpW_3KJ-k_l489b9SNg&s=08" target="_blank">E-CELL DMCE</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="copyright">© 2025 ECELL | E-CELL DMCE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/contact.js"></script>
+</body>
+</html>

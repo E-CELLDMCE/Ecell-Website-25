@@ -1,0 +1,746 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Oxygen', 'Montserrat', sans-serif;
+}
+
+:root {
+  --color-background: #000;
+  --color-foreground: #f8fafc;
+  --color-border: rgba(148, 163, 184, 0.2);
+  --color-card: #111;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+  --color-primary: #ffd345;
+  --color-primary-foreground: #000;
+  --color-accent: #8b0000;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===============================
+  PAGE CONTAINER & HERO SECTION
+=============================== */
+.page-container {
+  padding-top: 90px;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pageFadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.ecell-section {
+  padding: 4rem 1.5rem;
+}
+
+.ecell-hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.ecell-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ecell-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.ecell-text {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  line-height: 1.8;
+}
+
+/* ===============================
+  REACH SECTION
+=============================== */
+.reach-section {
+  background: linear-gradient(to top, #8b0000, #2c0101);
+  padding: 4rem 1.5rem;
+}
+
+.reach-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 4rem;
+}
+
+.reach-grid {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: nowrap;   /* ❗ prevents wrapping – all logos in one line */
+  overflow-x: auto;    /* allows scroll on extra-small screens */
+  padding-bottom: 10px;
+}
+.reach-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s, opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.reach-card:nth-child(1) { animation-delay: 0.1s; }
+.reach-card:nth-child(2) { animation-delay: 0.2s; }
+.reach-card:nth-child(3) { animation-delay: 0.3s; }
+
+.reach-card:hover {
+  transform: scale(1.05);
+}
+
+.reach-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 1rem 0;
+}
+
+/* === FIXED ICON STYLE === */
+.reach-icon {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto 1rem;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* ===============================
+  SOCIAL MEDIA FOLLOWERS SECTION
+=============================== */
+.social-section {
+  background: linear-gradient(to top, #8b0000, #2c0101);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.social-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+  transform: scale(1.05);
+}
+
+.social-card img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.social-card h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.social-card .followers-count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.social-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* ===============================
+   TIMELINE SECTION
+=============================== */
+.timeline-section {
+  padding: 4rem 1.5rem;
+  background: #000;
+}
+
+.timeline-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 4rem;
+}
+
+.timeline-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #dc2626;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  border: 4px solid #000;
+  z-index: 10;
+}
+
+.timeline-content {
+  width: 45%;
+  background: #000;
+  border: 2px solid #dc2626;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3);
+}
+
+.timeline-year {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-description {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===============================
+  FOOTER SECTION
+=============================== */
+.footer-content {
+    background-color: #000;
+    color: var(--text-light, #fff);
+    padding: 60px 50px;
+    border-radius: 16px 16px 0 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Layout container */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* -------- Left Section (Logo + Address) -------- */
+.footer-logo-section {
+    flex: 1 1 300px;
+}
+
+.footer-logo-section img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* -------- Right Section (Links) -------- */
+.footer-links-section {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: nowrap; /* keep everything on one line */
+}
+
+/* Each column (Quick Links, Resources, Legal, Contact) */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-light, #fff);
+    position: relative;
+}
+
+/* Link styling */
+.footer-column a {
+    text-decoration: none;
+    color: var(--text-light, #ddd);
+    font-size: 16px;
+    transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #f9c802; /* E-Cell yellow hover */
+}
+
+/* -------- Social Links Section -------- */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item img {
+    /* Styles for ALL images */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: brightness(0) invert(1); /* Keep for SVG/monochromatic icons */
+}
+
+.social-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(81%) sepia(68%) saturate(727%) hue-rotate(7deg) brightness(103%) contrast(103%);
+    /* yellow tint on hover */
+}
+
+
+.social-item img[alt="Twitter"] {
+    /* Remove the harsh filter that works poorly on non-SVG/non-monochromatic PNGs */
+    filter: none; 
+    
+    /* Ensure the hover effect doesn't break it either */
+    transition: transform 0.2s ease; /* Keep the transform */
+}
+
+.social-item img[alt="Twitter"]:hover {
+    /* Set the filter back to 'none' on hover if you don't want the gold color */
+    filter: none;
+    transform: scale(1.1);
+}
+
+.social-item a {
+    color: var(--text-light, #ddd);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.social-item a:hover {
+    color: #f9c802;
+}
+
+/* -------- Divider + Copyright -------- */
+.footer-divider {
+    width: 100%;
+    height: 2px;
+    background-color: var(--bg-light, #333);
+    margin: 60px 0 20px;
+    border-radius: 2px;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: var(--text-light, #bbb);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+@media (max-width: 1200px) {
+    .footer-links-section {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-section img {
+        width: 130px;
+    }
+
+    .footer-links-section {
+        justify-content: center;
+        flex-wrap: wrap; /* allows wrapping on medium screens */
+        gap: 40px;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 40px 20px;
+    }
+
+    .footer-links-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 15px;
+    }
+
+    .social-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo-section img {
+        width: 100px;
+    }
+
+    .footer-content {
+        padding: 35px 15px;
+    }
+
+    .footer-links-section {
+        gap: 25px;
+    }
+
+    .footer-column a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+}
+
+/* ===============================
+   ANIMATIONS
+=============================== */
+@keyframes pageFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .logo-section img {
+    width: 55px;
+  }
+  .ecell-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .ecell-image {
+    margin: 0 auto;
+  }
+  .timeline-item {
+    flex-direction: column !important;
+  }
+  .timeline-content {
+    width: 90%;
+  }
+  .timeline-line,
+  .timeline-dot {
+    left: 1rem;
+    transform: none;
+  }
+  .social-grid {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-section img {
+    width: 45px;
+  }
+  .ecell-title {
+    font-size: 2.5rem;
+  }
+  .reach-title,
+  .timeline-title {
+    font-size: 2rem;
+  }
+  .social-grid {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .social-card img {
+    width: 110px;
+  }
+  .social-card .followers-count {
+    font-size: 1.6rem;
+  }
+}
+
+
+  /* Header Styles */
+        /* ==============================
+    HEADER / NAVBAR STYLING
+   ============================== */
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    height: 75px; /* fixed height that won't increase */
+    position: static; /* not fixed — scrolls naturally */
+    z-index: 100;
+}
+
+/* LOGO SECTION */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    height: 60px;          /* actual image height */
+    width: auto;
+    transform: scale(1.3); /* makes it visually larger without increasing height */
+    transform-origin: left center;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-section img:hover {
+    transform: scale(1.4);
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f9c802; /* E-CELL yellow */
+}
+
+/* NAVIGATION LINKS */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+    color: #f9c802; /* E-CELL yellow hover */
+    transform: scale(1.1);
+}
+
+nav a.active {
+    color: #f9c802;
+}
+
+/* HAMBURGER BUTTON (MOBILE) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV MENU */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.25s ease;
+}
+
+.mobile-nav a:hover {
+    color: #f9c802;
+}
+
+/* WHEN MOBILE NAV IS ACTIVE */
+.mobile-nav.active {
+    display: flex;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 1024px) {
+    nav {
+        display: none; /* hide desktop nav */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-section img {
+        height: 55px;
+        transform: scale(1.2);
+    }
+
+    .header-content {
+        padding: 10px 25px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-section img {
+        height: 50px;
+        transform: scale(1.1);
+    }
+
+    .header-content {
+        padding: 10px 20px;
+        height: 65px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+
+.reach-grid::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+/* Icon size adjusted for all screens */
+.reach-icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* Extra responsiveness on very small phones */
+@media (max-width: 500px) {
+  .reach-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .reach-card {
+    min-width: 180px; /* Ensures each card stays tappable & readable */
+  }
+} 

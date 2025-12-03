@@ -1,0 +1,364 @@
+/* Styling for the webpage */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Ensure links in general body don't break, but header links are handled separately */
+a {
+    text-decoration: none;
+}
+
+/* ==============================
+    HEADER / NAVBAR STYLING (BOOTSTRAP OVERRIDE VERSION)
+   ============================== */
+
+/* 1. Header Container */
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 10px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    height: 75px; 
+    position: static;
+    z-index: 100;
+}
+
+/* 2. Logo Consistency */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    height: 60px;
+    width: auto;
+    transform: scale(1.3);
+    transform-origin: left center;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-section img:hover {
+    transform: scale(1.4);
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f9c802; 
+}
+
+/* 3. Navigation Links (BOOTSTRAP OVERRIDES) */
+nav.custom-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 0 !important; /* Remove Bootstrap margins */
+    padding: 0 !important; /* Remove Bootstrap paddings */
+}
+
+/* We use !important here to defeat Bootstrap's 'a' tag styling (usually blue/underlined) */
+nav.custom-nav a {
+    text-decoration: none !important;
+    color: #fff !important;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 17px;  
+    font-weight: 500; 
+    position: relative;
+    padding-bottom: 6px; 
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* The Golden Line */
+nav.custom-nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #f9c802;
+    box-shadow: 
+        0 0 8px rgba(249, 200, 2, 0.8), 
+        0 0 16px rgba(249, 200, 2, 0.6);
+    transition: width 0.4s ease-in-out; 
+}
+
+/* Hover & Active State */
+nav.custom-nav a:hover,
+nav.custom-nav a.active {
+    color: #f9c802 !important;
+    text-shadow: 
+        0 0 12px rgba(249, 200, 2, 0.6), 
+        0 0 24px rgba(249, 200, 2, 0.4);
+}
+
+/* Smooth Expansion */
+nav.custom-nav a:hover::after,
+nav.custom-nav a.active::after {
+    width: 100%;
+}
+
+/* HAMBURGER BUTTON (MOBILE) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV MENU */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-nav a {
+    text-decoration: none !important;
+    color: #fff !important;
+    font-size: 18px;
+    transition: color 0.25s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mobile-nav a:hover {
+    color: #f9c802 !important;
+}
+
+.mobile-nav.active {
+    display: flex;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 1024px) {
+    nav.custom-nav {
+        display: none; 
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo-section img {
+        height: 55px;
+        transform: scale(1.2);
+    }
+
+    .header-content {
+        padding: 10px 25px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-section img {
+        height: 50px;
+        transform: scale(1.1);
+    }
+
+    .header-content {
+        padding: 10px 20px;
+        height: 65px;
+    }
+}
+
+/* ===============================
+   FOOTER SECTION
+   =============================== */
+.footer-content {
+    background-color: #000;
+    color: #fff;
+    padding: 60px 50px;
+    border-radius: 16px 16px 0 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo-section {
+    flex: 1 1 300px;
+}
+
+.footer-logo-section img {
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-logo-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-links-section {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: nowrap; 
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-column a {
+    text-decoration: none !important; /* Override Bootstrap underline */
+    color: #ddd !important;
+    font-size: 16px;
+    transition: color 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #f9c802 !important; 
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: brightness(0) invert(1);
+}
+
+.social-item img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(81%) sepia(68%) saturate(727%) hue-rotate(7deg) brightness(103%) contrast(103%);
+}
+
+.social-item img[alt="Twitter"] {
+    /* Remove the harsh filter that works poorly on non-SVG/non-monochromatic PNGs */
+    filter: none; 
+    
+    /* Ensure the hover effect doesn't break it either */
+    transition: transform 0.2s ease; /* Keep the transform */
+}
+
+.social-item img[alt="Twitter"]:hover {
+    /* Set the filter back to 'none' on hover if you don't want the gold color */
+    filter: none;
+    transform: scale(1.1);
+}
+
+.social-item a {
+    color: #ddd !important;
+    font-size: 16px;
+    text-decoration: none !important;
+    transition: color 0.25s ease;
+}
+
+.social-item a:hover {
+    color: #f9c802 !important;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    margin: 60px 0 20px;
+    border-radius: 2px;
+}
+
+.copyright {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #bbb;
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 1200px) {
+    .footer-links-section {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-links-section {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    .footer-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 40px 20px;
+    }
+    .footer-links-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-column a { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+    .footer-logo-section img { width: 100px; }
+    .footer-content { padding: 35px 15px; }
+    .footer-links-section { gap: 25px; }
+    .footer-column a { font-size: 14px; }
+}
+
+/* Hover animation for contact form buttons */
+.btn:hover {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    transition: 0.3s ease;
+}
+
+iframe {
+    border: none;
+}
