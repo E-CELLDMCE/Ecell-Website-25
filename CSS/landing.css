@@ -455,8 +455,7 @@
         }
 
         .logo-section img:hover {
-            transform: scale(1.4) rotate(-5deg);
-            filter: drop-shadow(0 0 10px rgba(255, 211, 69, 0.5));
+            transform: scale(1.4);
         }
 
         .logo-text {
