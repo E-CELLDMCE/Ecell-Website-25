@@ -1,8 +1,6 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* top of your CSS */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; } /* optional safety-net */
 
         :root {
             --text-primary: #761315;

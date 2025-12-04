@@ -71,6 +71,7 @@ body {
 /* ===============================
   REACH SECTION
 =============================== */
+
 .reach-section {
   background: linear-gradient(to top, #8b0000, #2c0101);
   padding: 4rem 1.5rem;
@@ -85,16 +86,17 @@ body {
 }
 
 .reach-grid {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr)); /* desktop: 4 in a row */
   gap: 2rem;
-  flex-wrap: nowrap;   /* ❗ prevents wrapping – all logos in one line */
-  overflow-x: auto;    /* allows scroll on extra-small screens */
-  padding-bottom: 10px;
+  justify-items: center;
 }
+
 .reach-card {
+  width: 100%;
+  max-width: 230px;
   text-align: center;
   padding: 2rem;
   border-radius: 12px;
@@ -102,11 +104,13 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease-out forwards;
+  background: transparent;
 }
 
 .reach-card:nth-child(1) { animation-delay: 0.1s; }
 .reach-card:nth-child(2) { animation-delay: 0.2s; }
 .reach-card:nth-child(3) { animation-delay: 0.3s; }
+.reach-card:nth-child(4) { animation-delay: 0.4s; }
 
 .reach-card:hover {
   transform: scale(1.05);
@@ -119,7 +123,6 @@ body {
   margin: 1rem 0;
 }
 
-/* === FIXED ICON STYLE === */
 .reach-icon {
   width: 70px;
   height: 70px;
@@ -127,6 +130,29 @@ body {
   margin: 0 auto 1rem;
   overflow: visible;
   flex-shrink: 0;
+}
+
+/* Tablet / small laptops: 2 × 2 */
+@media (max-width: 900px) {
+  .reach-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+}
+
+/* Small phones: 1 per row */
+@media (max-width: 500px) {
+  .reach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reach-card {
+    max-width: 100%;
+  }
+
+  .reach-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* ===============================
@@ -414,7 +440,7 @@ body {
 
 /* ===============================
    RESPONSIVE DESIGN
-   =============================== */
+=============================== */
 
 @media (max-width: 1200px) {
     .footer-links-section {
@@ -576,10 +602,9 @@ body {
   }
 }
 
-
-  /* Header Styles */
-        /* ==============================
-    HEADER / NAVBAR STYLING
+/* Header Styles */
+/* ==============================
+   HEADER / NAVBAR STYLING
    ============================== */
 
 .header-content {
@@ -682,7 +707,7 @@ nav a.active {
 }
 
 /* ==============================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (HEADER)
    ============================== */
 
 @media (max-width: 1024px) {
@@ -721,25 +746,6 @@ nav a.active {
     }
 }
 
-
 .reach-grid::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome/Safari */
+  display: none; /* Hide scrollbar for Chrome/Safari (no effect now but harmless) */
 }
-
-/* Icon size adjusted for all screens */
-.reach-icon {
-  width: 70px;
-  height: 70px;
-}
-
-/* Extra responsiveness on very small phones */
-@media (max-width: 500px) {
-  .reach-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .reach-card {
-    min-width: 180px; /* Ensures each card stays tappable & readable */
-  }
-} 
