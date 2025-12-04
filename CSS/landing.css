@@ -415,7 +415,7 @@
         }
 
         /* ==============================
-           HEADER / NAVBAR STYLING
+            HEADER / NAVBAR STYLING
         ============================== */
         .header-content {
             width: 100%;
@@ -1512,3 +1512,23 @@
                 font-size: 13px;
             }
         }
+/* New code*/
+        /* Fix tagline and centering on small screens */
+@media (max-width: 600px) {
+    .zoom-tagline {
+        max-width: 90vw;        /* keep inside viewport */
+        padding: 0 12px;        /* little side padding */
+        font-size: 16px;        /* smaller text */
+        letter-spacing: 3px;    /* less spacing so it fits */
+        white-space: normal;    /* allow wrapping instead of cutting */
+        text-align: center;     /* keep it visually centered */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* extra safety: keep the scroll section exactly the viewport width */
+    .zoom-section,
+    .scroll-container {
+        width: 100%;
+    }
+}
