@@ -1,6 +1,7 @@
-/* top of your CSS */
-*, *::before, *::after { box-sizing: border-box; }
-html, body { overflow-x: hidden; } /* optional safety-net */
+ * {
+            margin: 0;
+            padding: 0;
+        }
 
         :root {
             --text-primary: #761315;
