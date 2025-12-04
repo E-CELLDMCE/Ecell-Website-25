@@ -247,7 +247,7 @@
             { id: 4, image: './images/Speakers/Shridhar-Mankar.png', name: 'Mr. Shridhar Mankar' },
             { id: 5, image: './images/Speakers/Devesh-Chawla.png', name: 'Mr. Devesh Chawla' },
             { id: 6, image: './images/Speakers/Ali-Solanki.png', name: 'Mr. Ali Solanki' },
-            { id: 7, image: './images/Speakers/Aditi-madhan.png', name: 'Ms. Aditi Madhan' },
+            { id: 7, image: './images/Speakers/aditi-madhan.png', name: 'Ms. Aditi Madhan' },
             { id: 8, image: './images/Speakers/Ammar-khanna.png', name: 'Dr. Amar Khanna' },
             { id: 9, image: './images/Speakers/Arjun-Deshpande.png', name: 'Mr. Arjun Deshpande' },
             { id: 10, image: './images/Speakers/raj-padiyar.jpg', name: 'Dr. Raj Padhiyar' },
