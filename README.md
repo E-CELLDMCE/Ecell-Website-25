@@ -1,1 +1,1 @@
-# This is a copy of Ecell Webiste
+# This is the offical website of ECELL DMCE 25
