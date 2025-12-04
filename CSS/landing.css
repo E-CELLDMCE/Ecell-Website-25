@@ -26,14 +26,8 @@
             font-weight: bold;
         }
 
-        /* Make sure root never scrolls sideways */
-        html, body {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
         /* ==============================
-        SCROLL ZOOM ANIMATION STYLES
+           SCROLL ZOOM ANIMATION STYLES
         ============================== */
         
         /* Initial landing section - full viewport */
@@ -62,7 +56,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/images/images/bg_img.png');
+            background-image: url('/ecell final/images/images/bg_img.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -351,10 +345,10 @@
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translateX(-50%);  
+            transform: translateX(-50%);
             width: 100vw;
             height: 100%;
-            background-image: url('/images/images/bg_img.png'); /* UPDATE THIS PATH to your bg image */
+            background-image: url('/ecell final/images/images/bg_img.png'); /* UPDATE THIS PATH to your bg image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -461,7 +455,8 @@
         }
 
         .logo-section img:hover {
-            transform: scale(1.4);
+            transform: scale(1.4) rotate(-5deg);
+            filter: drop-shadow(0 0 10px rgba(255, 211, 69, 0.5));
         }
 
         .logo-text {
@@ -1328,7 +1323,8 @@
         }
 
         .footer-logo-section img:hover {
-            transform: scale(1.4);
+            transform: scale(1.1) rotate(-5deg);
+            filter: drop-shadow(0 0 15px rgba(255, 211, 69, 0.5));
         }
 
         .footer-logo-section p {
@@ -1516,18 +1512,3 @@
                 font-size: 13px;
             }
         }
-
-/* On mobile, make sure hero background layers don't extend past the screen */
-@media (max-width: 768px) {
-    .hero-background,
-    .hero-overlay {
-        left: 0;
-        transform: none;
-        width: 100%;
-    }
-
-    .hero {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
